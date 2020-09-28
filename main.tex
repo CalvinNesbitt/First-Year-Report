@@ -1,0 +1,105 @@
+\documentclass[11pt,a4,oneside]{article}
+
+\title{First Year Report}
+\date{\today}
+\author{Calvin Nesbitt}
+
+% Using Local Style File
+\usepackage{style}
+
+\begin{document}
+
+\maketitle
+
+% Abstract
+\input{tex/abstract}
+
+% Contents
+\pagenumbering{roman}
+\tableofcontents
+\newpage
+\pagenumbering{arabic}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Intro
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{tex/Introduction.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Lyapunov Analysis
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\patha}{tex/Lyapunov}
+\input{\patha /Intro.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Lyapunov Analysis: Methodology
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\patha}{tex/Lyapunov/Methodology}
+
+\input{\patha /LE.tex}
+\input{\patha /Rate.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Lyapunov Analysis: Results
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% L63 Work
+\renewcommand{\patha}{tex/Lyapunov/L63-Results/}
+\input{\patha /L63.tex}
+
+% L96 Work
+\renewcommand{\patha}{tex/Lyapunov/L96-Results/}
+\input{\patha /Intro.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Lyapunov Analysis: Future Directions
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\renewcommand{\patha}{tex/Lyapunov/Future-Directions/}
+\input{\patha /Next-Steps.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Linear Response
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\patha}{tex/LRT}
+
+\input{\patha /Intro}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Ruelle Response Theory Overview
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\renewcommand{\patha}{tex/LRT/Ruelle/}
+\input{\patha /Summary.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% s3 Response
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\renewcommand{\patha}{tex/LRT/C-And-Wang/}
+\input{\patha /s3-algorithm.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Response: Future Directions
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\renewcommand{\patha}{tex/LRT/Future-Directions/}
+\input{\patha /Next-Steps.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Professional Development
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\patha}{tex/Professional-Development}
+\input{\patha /Summary.tex}
+
+
+%
+%% Bibliography
+\clearpage
+\bibliographystyle{alpha}
+\refstepcounter{section}
+\addcontentsline{toc}{section}{References}
+\newcommand{\bibLocation}{/Users/cfn18/Documents/PhD-Work/PhD-Latex-Repository/BibTex-Files} % Bibtex file repository
+\bibliography{\bibLocation /CLVs.bib, \bibLocation /Linear-Response-Theory.bib, \bibLocation /Large-Deviations.bib, \bibLocation /Ergodic-Theory.bib, \bibLocation /Lorenz-63.bib, \bibLocation /Climate.bib} % Read Bibtex file
+
+\end{document}

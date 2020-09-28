@@ -1,0 +1,20 @@
+\subsection{Ruelle Response Theory: An Overview}
+
+Linear response theory considers a dynamical system on two levels. For us the first level, the microscopic, will correspond to the trajectory $(x_0, x_1, \ldots )$ of a discrete time dynamical system $\varphi : \Mani \to \Mani$. Of particular interest to us is the case where $\varphi$ is the flow map of the solution to a nonlinear differential equation such as those modelling the motions of the atmosphere. The second level, the macroscopic, corresponds to observations we make on the dynamics $\Phi : \Mani \to \R$.\\
+
+The goal of linear response theory is then to determine the change in the average value of our chosen macroscopic observable $\Phi$ given a slight perturbation to the microscopic dynamics $\varphi_{\epsilon}(x) := \varphi + \epsilon(x)$. Ordinarily this perturbation on the microscopic level will correspond to a small parameter change, for example a change in the atmospheric heat capacity.\\
+
+Of course we need to mention how exactly we intend to take the average value of $\Phi$. There are two ways in which we can do this. The first is to take the long time average over a single trajectory $ \expval{\Phi} := \lim_{N \to \infty}\frac{1}{N} \sum_{i = 0} ^{N - 1} \Phi(\varphi ^i(x_0))$. Secondly, since we are principally interested in modelling forced, dissipative systems, we introduce the SRB measure $\rho(\Phi) := \int \rho(\dd x) \Phi(x)$ which is the natural choice of measure in such cases. In particular for axiom A attractors this is the unique measure where we have the natural property:
+
+\begin{align}
+    \rho(\Phi) = \expval{\Phi}. \label{eqn: natural-property}
+\end{align}
+
+A key point to note is that equation \ref{eqn: natural-property} holds when the time average is taken with respect to any initial condition except for a set of lebesgue measue $0$.\\
+
+In the above notation the question of linear response is then to determine $\delta \rho(\Phi) := \expval{\Phi _\epsilon} - \expval{\Phi}$,
+where the $\epsilon$ subscript has been used to indicate the microscopic dynamics are the perturbed ones. Using a perturbative approach it has been shown by Ruelle \cite{Ruelle1997a} \cite{Ruelle2009} that
+
+\begin{align}
+     \delta \rho(\Phi) = \sum_{n = 0}^\infty \rho \left( \epsilon(x)\grad _x (\Phi \circ \varphi^n) \right). \label{eqn: Ruelle Formula}
+\end{align}

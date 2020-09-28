@@ -1,0 +1,41 @@
+\subsection{Mathematical Theory of Lyapunov Exponents} \label{subsection: LE Basics}
+
+For a continuous dynamical system
+
+\begin{align}
+\dot{\vb{x}}(t) = g(\vb{x}(t)) \label{eqn: Dyn-Sys}
+\end{align}
+
+the evolution of a perturbation to \ref{eqn: Dyn-Sys} is governed by the linearised equations of motion
+
+\begin{align}
+\dot{\vb{v}}(t) = Dg(\vb{x}, t)\vb{v}(t) \label{eqn: TLE}.
+\end{align}
+
+In order to assess the stability properties of a solution to \ref{eqn: Dyn-Sys} at a given point $\vb{x}(t_0)$ on the attractor, one must determine whether an initial perturbation (tangent vector) at this point, $\vb{v}(t_0)$ grows or shrinks under the dynamics of \ref{eqn: TLE}. Thus for a fixed time horizon $\tau$, if we wish to quantify the growth of perturbations, we are led to define the FTLE $\tilde{\lambda}(t_0, \tau)$ as the exponential growth rate of $\vb{v}(t_0)$,
+
+\begin{align}
+\tilde{\lambda}(t_0, \tau) := \frac{1}{\tau} \log \left( {\frac{|\vb{v}(t_0 + \tau)|}{|\vb{v}(t_0)|}} \right). \label{FTLE definition}
+\end{align}
+
+Assuming ergodicity, we then define the Lyapunov exponents $\lambda_i$ via an application of Birkhoff's ergodic theorem \cite{Petersen1989} to the FTLEs
+
+\begin{align}
+    \lambda_i := \lim_{N \to \infty} \frac{1}{N} \sum_{j = 0} ^ {N-1} \tilde{\lambda}(t_0 + j \tau, \tau). \label{LE definition}
+\end{align}
+
+One slight of hand that we need to explain here is that in defintion \ref{FTLE definition} we are implicity selecting an initial condition/tangent vector to perturb along. This of course means one may expect different values for the limit in \ref{LE definition}. The multiplicative ergodic theorem of Oseldets \cite{Oseledets1968} guarantees that the Lyapunov exponents as defined in \ref{LE definition} will only take on $n$ possible values (which we order as):
+
+\begin{align}
+    \lambda_1 \geq \lambda_2 \geq \dots \geq \lambda_n \label{LE list}
+\end{align}
+
+where $n$ is the dimension of the phase space. Which of these values it takes, is ultimately dependent on the direction of the initial perturbation. In particular, the theorem of Oseldets says that we have partition of the tangent space at each point along the attractor
+
+\begin{align}
+T_{\vb{x}} M = E_1 \oplus E_2 \oplus \dots \oplus E_n \label{Ruelle Split}
+\end{align}
+
+such that a choice of initial condition in $E_i$ will result in the \ref{LE definition} taking on the value $\lambda_i$.\\
+
+The goal of our work in this past year has been to find the $\lambda_i$ along with the corresponding tangent space partitions $E_i$. Using an algorithm of Ginelli \cite{Ginelli2013} we have found two different set of basis vectors corresponding to the $E_i$: the CLVs and backward Lyapunov vectors (BLVs). CLVs are covariant with the linearised dynamics whilst the BLVs are orthogonal to one another.
