@@ -12,7 +12,7 @@ the evolution of a perturbation to \ref{eqn: Dyn-Sys} is governed by the lineari
 \dot{\vb{v}}(t) = Dg(\vb{x}, t)\vb{v}(t) \label{eqn: TLE}.
 \end{align}
 
-In order to assess the stability properties of a solution to \ref{eqn: Dyn-Sys} at a given point $\vb{x}(t_0)$ on the attractor, one must determine whether an initial perturbation (tangent vector) at this point, $\vb{v}(t_0)$ grows or shrinks under the dynamics of \ref{eqn: TLE}. Thus for a fixed time horizon $\tau$, if we wish to quantify the growth of perturbations, we are led to define the FTLE $\tilde{\lambda}(t_0, \tau)$ as the exponential growth rate of $\vb{v}(t_0)$,
+In order to assess the stability properties of a solution to \ref{eqn: Dyn-Sys} at a given point $\vb{x}(t_0)$ on the attractor, one must determine whether an initial perturbation (tangent vector) at this point, $\vb{v}(t_0)$ grows or shrinks under the dynamics of \ref{eqn: TLE}. Thus for a fixed time horizon $\tau$, if we wish to quantify the growth of perturbations, we are led to define the finite time Lyapunov exponent (FTLE) $\tilde{\lambda}(t_0, \tau)$ as the exponential growth rate of $\vb{v}(t_0)$,
 
 \begin{align}
 \tilde{\lambda}(t_0, \tau) := \frac{1}{\tau} \log \left( {\frac{|\vb{v}(t_0 + \tau)|}{|\vb{v}(t_0)|}} \right). \label{FTLE definition}
@@ -36,6 +36,6 @@ where $n$ is the dimension of the phase space. Which of these values it takes, i
 T_{\vb{x}} M = E_1 \oplus E_2 \oplus \dots \oplus E_n \label{Ruelle Split}
 \end{align}
 
-such that a choice of initial condition in $E_i$ will result in the \ref{LE definition} taking on the value $\lambda_i$.\\
+such that a choice of initial condition in $E_i$ will result in the limit defined in \ref{LE definition} taking on the value $\lambda_i$.\\
 
-The goal of our work in this past year has been to find the $\lambda_i$ along with the corresponding tangent space partitions $E_i$. Using an algorithm of Ginelli \cite{Ginelli2013} we have found two different set of basis vectors corresponding to the $E_i$: the CLVs and backward Lyapunov vectors (BLVs). CLVs are covariant with the linearised dynamics whilst the BLVs are orthogonal to one another.
+One goal of our work in this past year has been to find the $\lambda_i$ along with the corresponding tangent space partitions $E_i$. Using an algorithm of Ginelli \cite{Ginelli2013} we have found two different set of basis vectors corresponding to the $E_i$: the CLVs and backward Lyapunov vectors (BLVs). CLVs are covariant with the linearised dynamics whilst the BLVs are orthogonal to one another. In particular the CLVs are of importance to us as they will be required for applications in linear response which we discuss in section \ref{section: LRT}.

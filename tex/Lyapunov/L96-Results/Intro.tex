@@ -7,9 +7,9 @@ The two scale Lorenz 96 model mimics the evolution of two scale separated atmosp
 \dv{}{t} y_{k,j} &= cb y_{k, j+1} \left(y_{k, j-1} - y_{k, j + 2} \right) - c y_{k, j} + \frac{c}{b} F_f + \frac{hc}{b} x_k. \label{fast-variables}
 \end{align}
 
-Here \ref{slow-variables} represents the time evolution of a spatially large, slow variable that is designed to model a synoptic scale process whilst \ref{fast-variables} represents the evolution a smaller, fast variable that models convective motions.\\
+Here \ref{slow-variables} represents the time evolution of a spatially large, slow variable that is designed to model a synoptic scale process whilst \ref{fast-variables} represents the evolution a smaller, fast variable that models convective motions whilst $F_s$, $F_f$, $h$, $b$ and $c$ are parameters that we will not discuss here. \\
 
-Building on out work in L63 we have also calculated Lyapunov exponents, vectors and associated rate functions for the L96 model. Moreover we have investigated the effect of the time scale seperation parameter $c$ and the coupling strength paraemter $h$ on the aforementioned quantities. Three specific questions we sought to address were:
+Building on out work in L63 we have also calculated Lyapunov exponents, vectors and associated rate functions for the L96 model. In particular we have looked at the case with $36$ synoptic variables and $360$ convective variables. We have investigated the effect of the time scale seperation parameter $c$ and the coupling strength paraemter $h$ on the aforementioned quantities. Three specific questions we sought to address were:
 
 \begin{enumerate}
     \item Is it possible to associate large/small scale processes with particular CLVs? This was inspired by the findings \cite{Vannitsem2016}. \label{question: scale}
@@ -17,9 +17,9 @@ Building on out work in L63 we have also calculated Lyapunov exponents, vectors 
     \item To what extent are the stable, unstable and centre manifolds distinguishable from one another? This will help us address the question of whether the Lorenz $96$ can be modelled as hyperbolic or not. This largely builds on \cite{Carlu2019} \label{question: L96-hyperbolic}.
 \end{enumerate}
 
-Following \cite{Vannitsem2016} we found looking at the CLV variance provided an affirmative answer to question \ref{question: scale}. In particular we found that the CLVs associated to near $0$ Lyapunov exponents had positive correlations with the synoptic scale variables whilst those large in magnitude, both positive and negative were associated with convective motions. This is what one would intuitively expect given that the convective motions take place on much shorter timescales.\\
+Following \cite{Vannitsem2016} we found looking at the CLV variance provided an affirmative answer to question \ref{question: scale}. In particular, as plotted in figure \label{fig:c-effect-CLE}, we found that the CLVs associated to near $0$ Lyapunov exponents had positive correlations with the synoptic scale variables whilst those large in magnitude, both positive and negative were associated with convective motions. This is what one would intuitively expect given that the convective motions take place on much shorter timescales.\\
 
-Our answer to \ref{question: l96-LDP} was inconclusive since the length of timeseries needed to compute the rate function by brute force proved impractical. In answer to \ref{question: L96-hyperbolic} we found a large projection on to the centre direction that we associated with slow scale processes. Indeed in the limit of the time scale seperation parameter one only finds center CLVs associated to the synoptic variables.
+Our answer to \ref{question: l96-LDP} was inconclusive since the length of timeseries needed to compute the rate function by brute force proved impractical. In answer to \ref{question: L96-hyperbolic} we found a large projection on to the centre direction that we associated with slow scale processes. Indeed in the limit of the time scale seperation parameter one only finds center CLVs associated to the synoptic variables. This of interest in relation to linear response as the theory of Ruelle relies on uniform hyperbolicity.
 
 
 % CLE Spectra Figure
@@ -32,9 +32,9 @@ Our answer to \ref{question: l96-LDP} was inconclusive since the length of times
 \end{figure}
 
 % CLV Variance Projection Figure
-\begin{figure}
-\centering
-\includegraphics[width=\textwidth, keepaspectratio]{CLV-Component-Projection}
-\caption{Variance of each CLV by component. The y axis corresponds to the CLV index, whilst the x axis corresponds to the CLV component. The component variance is plotted with a logarithmic scale. The different panels correspond to increasing values of $c$ when read from the top left. Note the first $36$ variable of the model are the synoptic variables whilst the next $360$ correspond to convective variables.}
-\label{fig:c-effect-projection}
-\end{figure}
+% \begin{figure}
+% \centering
+% \includegraphics[width=\textwidth, keepaspectratio]{CLV-Component-Projection}
+% \caption{Variance of each CLV by component. The y axis corresponds to the CLV index, whilst the x axis corresponds to the CLV component. The component variance is plotted with a logarithmic scale. The different panels correspond to increasing values of $c$ when read from the top left. Note the first $36$ variable of the model are the synoptic variables whilst the next $360$ correspond to convective variables.}
+% \label{fig:c-effect-projection}
+% \end{figure}
