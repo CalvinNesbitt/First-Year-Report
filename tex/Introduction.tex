@@ -1,5 +1,12 @@
 \section{Introduction}
 
-Our work this year has largely centred on two directions. The first is the study of Lyapunov exponents and their fluctuations from the point of view of large deviation theory. The second is linear response theory for differentiable dynamical systems. The former has been the earlier focus, whilst in many ways the second builds on the first.\\
+Our work this year has largely centred on two directions. The first is the study of Lyapunov exponents, vectors and their fluctuations. The second is linear response theory for differentiable dynamical systems.\\
 
-The first part of our PhD work has centred on implementing an algorithm of Ginelli \cite{Ginelli2013} to calculate the Lyapunov exponents and vectors for two simple models: Lorenz 63 (L63) and Lorenz 96 (L96). The implementation in Lorenz 63 was largely a test case whilst in Lorenz 96 we have been able to find an expected correspondence between finite time Lyapunov exponents (FTLEs) and the timescale of the dynamics. This work has been built on by also looking at the fluctuations of the FTLEs in the hope of finding a large deviation result. In section \ref{section: Lyap-Analysis} we will present some of the basic ideas underlying this work and a summary of our findings over the past year. In the final part of this section we also discuss our future aims in this direction.
+In the first direction we have succesfully implemented an algorithm of Ginelli \cite{Ginelli2013} to calculate the Lyapunov exponents and vectors for two simple ODE models that capture aspects of atmospheric dynamics in a simplified way. Beyond simply calculating the Lyapunov exponents and vectors we have also investigated their fluctuations in the hope of finding a large deviation result. In section \ref{section: Lyap-Analysis} we will present the basic mathematical ideas underlying this work and a summary of our findings. We also discuss how we intend to build on this work.\\
+
+The second direction, that of linear response, builds on the first. Specifically it requires knowledge of the aforementioned Lyapunov vectors. We are currently in the process of our first attempt at numerically implementing the response formula of Ruelle \cite{Ruelle2009}. In section \ref{section: LRT} we shall explain the theory of this formula and reference the S3 algorithm \cite{Chandramoorthy2020} that we are currently working with.\\
+
+Finally we also briefly discuss activities undertaken towards professional development at the report's end.
+
+
+% The Lorenz 63 model reflects the chaoticity associated with atmospheric motion and was an appropriate starting point since it is well understood and low dimensional. The second model, Lorenz 96, features two timescales and so is an appropriate starting point for using the Lyapunov exponents to understand multiscale processes in climate which is our ultimate goal.

@@ -20,3 +20,21 @@ Building on out work in L63 we have also calculated Lyapunov exponents, vectors 
 Following \cite{Vannitsem2016} we found looking at the CLV variance provided an affirmative answer to question \ref{question: scale}. In particular we found that the CLVs associated to near $0$ Lyapunov exponents had positive correlations with the synoptic scale variables whilst those large in magnitude, both positive and negative were associated with convective motions. This is what one would intuitively expect given that the convective motions take place on much shorter timescales.\\
 
 Our answer to \ref{question: l96-LDP} was inconclusive since the length of timeseries needed to compute the rate function by brute force proved impractical. In answer to \ref{question: L96-hyperbolic} we found a large projection on to the centre direction that we associated with slow scale processes. Indeed in the limit of the time scale seperation parameter one only finds center CLVs associated to the synoptic variables.
+
+
+% CLE Spectra Figure
+
+\begin{figure}
+\centering
+\includegraphics[width=0.6\textwidth, keepaspectratio]{CLE-Spectra}
+\caption{The effect of the parameter $c$ on the Lyapunov exponents of Lorenz $96$. A larger value of $c$ corresponds to less near $0$ exponents as well as an increase in the absolute value of the most positive and negative exponents.}
+\label{fig:c-effect-CLE}
+\end{figure}
+
+% CLV Variance Projection Figure
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth, keepaspectratio]{CLV-Component-Projection}
+\caption{Variance of each CLV by component. The y axis corresponds to the CLV index, whilst the x axis corresponds to the CLV component. The component variance is plotted with a logarithmic scale. The different panels correspond to increasing values of $c$ when read from the top left. Note the first $36$ variable of the model are the synoptic variables whilst the next $360$ correspond to convective variables.}
+\label{fig:c-effect-projection}
+\end{figure}
